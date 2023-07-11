@@ -10,9 +10,16 @@ function makeGrid() {
             const cell = document.createElement("div");
             cell.classList.add("cell");
             cell.style.flex = `1 0 calc(100% / ${gridSize})`;
+
+            cell.addEventListener("mouseover", function () {
+                this.style.backgroundColor = "black";
+            });
+
             container.appendChild(cell);
         }
     }
 }
+
+
 
 makeGrid();
