@@ -1,3 +1,6 @@
+// Get the body
+const body = document.querySelector("body");
+
 // Get the container grid
 const container = document.querySelector(".container");
 
@@ -29,6 +32,10 @@ function makeGrid(gridSize) {
             container.appendChild(cell);
         }
     }
+
+    // Apply styles
+    blackButton.classList.add("active-mode");
+    rainbowButton.classList.remove("active-mode");
 }
 
 // Change the grid size value
@@ -49,6 +56,12 @@ function resize() {
 resetButton.addEventListener("click", function () {
     gridSize = 16;
     resize();
+    gridSizeValue.textContent = `${gridSize} x ${gridSize}`;
+    gridSizeInput.value = 16;
+
+    // Apply styles
+    blackButton.classList.add("active-mode");
+    rainbowButton.classList.remove("active-mode");
 });
 
 eraseButton.addEventListener("click", function () {
@@ -59,6 +72,10 @@ eraseButton.addEventListener("click", function () {
             this.style.backgroundColor = "#fff";
         });
     }
+
+    // Apply styles
+    blackButton.classList.remove("active-mode");
+    rainbowButton.classList.remove("active-mode");
 });
 
 // Randomised hex colour
@@ -80,6 +97,10 @@ blackButton.addEventListener("click", function () {
             this.style.backgroundColor = "black";
         });
     }
+
+    // Apply styles
+    blackButton.classList.add("active-mode");
+    rainbowButton.classList.remove("active-mode");
 });
 
 // Apply rainbow mode
@@ -91,6 +112,10 @@ rainbowButton.addEventListener("click", function () {
             this.style.backgroundColor = randomHex();
         });
     }
+
+    // Apply styles
+    rainbowButton.classList.add("active-mode");
+    blackButton.classList.remove("active-mode");
 });
 
 makeGrid(gridSize);

@@ -6,10 +6,12 @@
 body {
     margin: 0 auto;
     text-align: center;
-    font-family: "Dekko", Helvetica;
+    font-family: Helvetica, Arial, sans-serif;
     font-size: xx-large;
     max-width: 100%;
     overflow-x: hidden;
+    transition: 1s;
+    background-color: #fff;
 }
 
 .container {
@@ -50,11 +52,11 @@ body {
 }
 
 .editor:hover {
-    scale: 1.5;
+    scale: 1.2;
 }
 
 .editor:active {
-    scale: 1.2;
+    scale: 0.9;
 }
 
 .editor > img{
@@ -65,6 +67,18 @@ body {
     margin: auto;
     flex-direction: column;
     width: 200px;
+}
+
+.modal {
+    margin: auto;
+    border: 5px outset #ccc;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.modal.active-mode {
+    border: 5px inset #444;
 }
 
 .footer {
