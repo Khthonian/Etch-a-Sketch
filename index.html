@@ -8,11 +8,36 @@
 </head>
 <body>
     <h1>Etch a Sketch!</h1>
-    <div class="button-box">
-        <button id="reset-button">Reset Grid</button>
-    </div>
     <div class="container"></div>
-
+    <div class="control-box">
+        <h2>Controls</h2>
+        <div class="button-box">
+            <button class="reset editor">
+                <img src="images/reset.svg" alt="reset">
+            </button>
+            <div class="grid-sizer">
+                <div class="grid-size">16 x 16</div>
+                <input type="range" min="1" max="100" value="16"></input>
+            </div>
+            <button class="apply editor">
+                <img src="images/tick.svg" alt="tick mark">
+            </button>
+        </div>
+    </div>
+    <footer class="footer">
+        <div>
+          Copyright ©
+          <script>
+            document.write(new Date().getFullYear())
+          </script>
+          Khthonian
+        </div>
+        <div>
+            <a href="https://github.com/khthonian" target="_blank">
+                <img id="github-link" src="images/github-mark.svg" alt="github icon">
+            </a>
+        </div>
+    </footer>
     <script src="./script.js"></script>
 </body>
 </html>

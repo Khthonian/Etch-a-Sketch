@@ -15,14 +15,71 @@ body {
 .container {
     display: flex;
     flex-wrap: wrap;
-    height: 60vh;
-    width: 60vh;
-    border: 1px solid #ccc;
+    height: 50vh;
+    width: 50vh;
     margin: auto;
+    border: 5px solid black;
 }
 
 .cell {
     background-color: #fff;
     border: 1px solid #ccc;
     box-sizing: border-box;
+}
+
+.control-box {
+    padding: 20px;
+}
+
+.button-box {
+    margin: auto;
+    width: 60vh;
+}
+
+.editor, .grid-sizer {
+    display: inline-block;
+}
+
+.editor{
+    background-color: transparent;
+    border: none;
+    transition: 0.5s;
+}
+
+.editor:hover, .editor:focus {
+    scale: 1.5;
+}
+
+.editor > img{
+    width: 40px;
+}
+
+.grid-sizer {
+    margin: auto;
+    flex-direction: column;
+    width: 200px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
+    color: var(--primary-light);
+    font-size: x-large;
+}
+
+#github-link {
+    width: 40px;
+    height: auto;
+    transition: 0.5s;
+}
+
+#github-link:hover, #github:focus {
+    scale: 1.1;
 }
