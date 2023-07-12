@@ -10,6 +10,10 @@ const applyButton = document.querySelector(".apply");
 let gridSizeInput = document.querySelector("input");
 let gridSize = 16;
 
+// Get the colour modes
+const blackButton = document.querySelector(".black-mode");
+const rainbowButton = document.querySelector(".rainbow-mode");
+
 
 function makeGrid(gridSize) {
     for (let i = 0; i < gridSize; i++) {
@@ -47,5 +51,37 @@ resetButton.addEventListener("click", function () {
 });
 
 applyButton.addEventListener("click", resize);
+
+// Randomised hex colour
+function randomHex() {
+    let hexValues = "0123456789ABCDEF";
+    let randomHex = "#"
+    for (let i = 0; i < 6; i++) {
+        randomHex += hexValues[Math.floor(Math.random() * 16)];
+    }
+    return randomHex;
+}
+
+// Apply black mode
+blackButton.addEventListener("click", function () {
+    let value = gridSizeInput.value;
+    let cell = container.children;
+    for (let i = 0; i < value * value; i++) {
+        cell[i].addEventListener("mouseover", function () {
+            this.style.backgroundColor = "black";
+        });
+    }
+});
+
+// Apply black mode
+rainbowButton.addEventListener("click", function () {
+    let value = gridSizeInput.value;
+    let cell = container.children;
+    for (let i = 0; i < value * value; i++) {
+        cell[i].addEventListener("mouseover", function () {
+            this.style.backgroundColor = randomHex();
+        });
+    }
+});
 
 makeGrid(gridSize);

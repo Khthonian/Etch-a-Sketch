@@ -15,10 +15,12 @@ body {
 .container {
     display: flex;
     flex-wrap: wrap;
-    height: 50vh;
-    width: 50vh;
+    height: 55vh;
+    width: 55vh;
     margin: auto;
     border: 5px solid black;
+    border-radius: 10px;
+    box-shadow:  20px 20px 10px #bebebe, -20px -20px 10px #ffffff;
 }
 
 .cell {
