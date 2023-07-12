@@ -4,7 +4,7 @@ const container = document.querySelector(".container");
 // Get the control inputs
 const resetButton = document.querySelector(".reset");
 const gridSizeValue = document.querySelector(".grid-size");
-const applyButton = document.querySelector(".apply");
+const eraseButton = document.querySelector(".erase");
 
 // Get the grid size
 let gridSizeInput = document.querySelector("input");
@@ -35,6 +35,7 @@ function makeGrid(gridSize) {
 gridSizeInput.addEventListener("input", function (e) {
     gridSize = e.target.value;
     gridSizeValue.textContent = `${gridSize} x ${gridSize}`;
+    resize();
 });
 
 // Enable grid resetting
@@ -50,7 +51,15 @@ resetButton.addEventListener("click", function () {
     resize();
 });
 
-applyButton.addEventListener("click", resize);
+eraseButton.addEventListener("click", function () {
+    let value = gridSizeInput.value;
+    let cell = container.children;
+    for (let i = 0; i < value * value; i++) {
+        cell[i].addEventListener("mouseover", function () {
+            this.style.backgroundColor = "#fff";
+        });
+    }
+});
 
 // Randomised hex colour
 function randomHex() {
@@ -73,7 +82,7 @@ blackButton.addEventListener("click", function () {
     }
 });
 
-// Apply black mode
+// Apply rainbow mode
 rainbowButton.addEventListener("click", function () {
     let value = gridSizeInput.value;
     let cell = container.children;

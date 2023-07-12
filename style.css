@@ -27,6 +27,7 @@ body {
     background-color: #fff;
     border: 1px solid #ccc;
     box-sizing: border-box;
+    transition: 0.4s;
 }
 
 .control-box {
@@ -48,8 +49,12 @@ body {
     transition: 0.5s;
 }
 
-.editor:hover, .editor:focus {
+.editor:hover {
     scale: 1.5;
+}
+
+.editor:active {
+    scale: 1.2;
 }
 
 .editor > img{
