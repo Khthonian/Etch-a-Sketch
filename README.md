@@ -1,3 +1,9 @@
 # Etch-a-Sketch
 
-A work-in-progress implementation of an etch-a-sketch to showcase JavaScript interactions. Currently working on improvements to the CSS styling of the page.
+## What Does It Do?
+This is an implementation of an etch-a-sketch to showcase JavaScript interactions. The user is able to:
+- Use black colouring
+- Use an alternating rainbow colouring
+- Use an eraser feature
+- Change the volume of the grids
+- Clean the grid
