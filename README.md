@@ -7,3 +7,6 @@ This is an implementation of an etch-a-sketch to showcase JavaScript interaction
 - Use an eraser feature
 - Change the volume of the grids
 - Clean the grid
+
+## License
+This project is licensed under the [MIT License](LICENSE.md).
